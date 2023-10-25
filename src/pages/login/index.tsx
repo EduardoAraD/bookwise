@@ -1,11 +1,19 @@
 import Image from 'next/image'
+import { useRouter } from 'next/router'
+
+import { ButtonLogin } from '../../components/ButtonLogin'
 
 import { Content, ImageBackground, LoginContainer } from './styles'
 import backgroundImage from '../../assets/backgroundImage.png'
 import logo from '../../assets/logo.png'
-import { ButtonLogin } from '@/src/components/ButtonLogin'
 
 export default function Login() {
+  const router = useRouter()
+
+  async function handleGoHome() {
+    await router.push('/home')
+  }
+
   return (
     <LoginContainer>
       <ImageBackground>
@@ -21,9 +29,24 @@ export default function Login() {
           <h2>Boas vindas!</h2>
           <p>Faça seu login ou acesse como visitante.</p>
 
-          <ButtonLogin title="Entrar no Google" typeLogin="google" />
-          <ButtonLogin title="Entrar no Github" typeLogin="github" />
-          <ButtonLogin title="Entrar como visitante" typeLogin="visitant" />
+          <ButtonLogin
+            type="button"
+            onClick={handleGoHome}
+            title="Entrar no Google"
+            typeLogin="google"
+          />
+          <ButtonLogin
+            type="button"
+            onClick={handleGoHome}
+            title="Entrar no Github"
+            typeLogin="github"
+          />
+          <ButtonLogin
+            type="button"
+            onClick={handleGoHome}
+            title="Entrar como visitante"
+            typeLogin="visitant"
+          />
         </div>
       </Content>
     </LoginContainer>

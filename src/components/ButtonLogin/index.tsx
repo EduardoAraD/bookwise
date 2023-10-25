@@ -1,3 +1,4 @@
+import { ButtonHTMLAttributes } from 'react'
 import Image from 'next/image'
 
 import { ContainerButton, TextButton } from './styles'
@@ -5,12 +6,12 @@ import googleSvg from '../../assets/googleIcon.svg'
 import githubSvg from '../../assets/githubIcon.svg'
 import rocketSvg from '../../assets/rocket.svg'
 
-interface ButtonLoginProps {
+interface ButtonLoginProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   typeLogin: 'google' | 'github' | 'visitant'
   title: string
 }
 
-export function ButtonLogin({ title, typeLogin }: ButtonLoginProps) {
+export function ButtonLogin({ title, typeLogin, ...rest }: ButtonLoginProps) {
   const imageSvg =
     typeLogin === 'github'
       ? githubSvg
@@ -19,7 +20,7 @@ export function ButtonLogin({ title, typeLogin }: ButtonLoginProps) {
       : rocketSvg
 
   return (
-    <ContainerButton>
+    <ContainerButton {...rest}>
       <Image src={imageSvg} alt="google" width={32} height={32} />
       <TextButton>{title}</TextButton>
     </ContainerButton>

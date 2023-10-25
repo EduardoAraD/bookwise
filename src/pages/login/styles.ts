@@ -49,10 +49,10 @@ export const Content = styled('div', {
   '> div': {
     display: 'flex',
     flexDirection: 'column',
-    gap: '1rem',
+    gap: '$4',
 
     p: {
-      marginTop: '-1rem',
+      marginTop: '-$4',
     },
   },
 })

@@ -10,6 +10,7 @@
     "lint:fix": "next lint --fix"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.0.13",
     "@stitches/react": "^1.2.8",
     "next": "13.5.4",
     "react": "^18",
