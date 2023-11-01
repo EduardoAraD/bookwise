@@ -1,4 +1,4 @@
-import { ChartLine, SignOut, Binoculars } from '@phosphor-icons/react'
+import { ChartLine, SignOut, Binoculars, User } from '@phosphor-icons/react'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 
@@ -30,6 +30,13 @@ export function Drawer() {
               <div />
               <Binoculars size={24} />
               Explorar
+            </ItemNav>
+          </li>
+          <li>
+            <ItemNav href="/profile" selected={router.asPath === '/profile'}>
+              <div />
+              <User size={24} />
+              Perfil
             </ItemNav>
           </li>
         </ul>

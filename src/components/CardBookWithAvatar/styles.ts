@@ -1,6 +1,6 @@
-import { styled } from '@/src/styles/theme'
+import { styled } from '../../styles/theme'
 
-export const CardCommentContainer = styled('button', {
+export const CardContainer = styled('button', {
   all: 'unset',
 
   display: 'flex',
@@ -15,15 +15,6 @@ export const ContentInfo = styled('div', {
   display: 'flex',
   justifyContent: 'space-between',
   gap: '$4',
-
-  'div.stars': {
-    display: 'flex',
-    gap: '$1',
-  },
-
-  svg: {
-    fill: '$purple100',
-  },
 })
 
 export const ContentAvatar = styled('div', {
@@ -71,6 +62,10 @@ export const ContentBookInfo = styled('div', {
     fontSize: '$sm',
     color: '$gray300',
     lineHeight: '$base',
+
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    maxHeight: '5.6rem',
   },
 })
 

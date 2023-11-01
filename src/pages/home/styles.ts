@@ -16,10 +16,6 @@ export const Content = styled('div', {
     color: '$gray100',
     display: 'flex',
   },
-
-  '::-webkit-scrollbar': {
-    width: '2px',
-  },
 })
 
 export const Title = styled('div', {
@@ -28,7 +24,7 @@ export const Title = styled('div', {
 
   p: {
     fontSize: '$2xl',
-    fontWeight: '$medium',
+    fontWeight: '$bold',
     color: '$gray100',
   },
   svg: {

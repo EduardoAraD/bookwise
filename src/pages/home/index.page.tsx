@@ -1,4 +1,7 @@
 import { CaretRight, ChartLine } from '@phosphor-icons/react'
+
+import { CardBookSlow, CardBookBase } from '../../components/CardBook'
+import { CardBookWithAvatar } from '../../components/CardBookWithAvatar'
 import { Drawer } from '../../components/Drawer'
 
 import {
@@ -9,8 +12,6 @@ import {
   Title,
   TitleSugestion,
 } from './styles'
-import { CardComment } from '@/src/components/CardComment'
-import { CardBook } from '@/src/components/CardBook'
 
 export default function Home() {
   const isLogged = true
@@ -33,13 +34,13 @@ export default function Home() {
                     Ver todos <CaretRight />
                   </button>
                 </TitleSugestion>
-                <CardComment noteStar={5} />
+                <CardBookBase />
               </DivLastBook>
             )}
 
             <span>Avaliações mais recentes</span>
-            <CardComment noteStar={2} />
-            <CardComment noteStar={4} />
+            <CardBookWithAvatar noteStar={2} />
+            <CardBookWithAvatar noteStar={4} />
           </div>
           <div className="list-sugest">
             <TitleSugestion>
@@ -48,9 +49,9 @@ export default function Home() {
                 Ver todos <CaretRight />
               </button>
             </TitleSugestion>
-            <CardBook noteStar={2} />
-            <CardBook noteStar={3} />
-            <CardBook noteStar={5} />
+            <CardBookSlow noteStar={2} />
+            <CardBookSlow noteStar={3} />
+            <CardBookSlow noteStar={5} />
           </div>
         </DualList>
       </Content>

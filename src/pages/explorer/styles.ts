@@ -7,4 +7,7 @@ export const ExplorerContainer = styled('main', {
   display: 'flex',
 })
 
-export const Content = styled('div', {})
+export const Content = styled('div', {
+  padding: '4.5rem 6rem',
+  overflow: 'auto',
+})
